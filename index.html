@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Generative Images</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  footer {
+  background-color: #1d1f23; /* Darker background for better contrast */
+  color: #f4f4f4; /* Light text color */
+  text-align: center;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace; /* Special font */
+  border-top: 5px solid #4CAF50; /* Adds a top border for emphasis */
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 18px;
+  letter-spacing: 2px; /* Adds spacing between letters for a special effect */
+}
+
+footer p:first-of-type {
+  font-weight: bold;
+}
+
+footer p:nth-of-type(2) {
+  font-style: italic; /* Special style for the second line */
+}
+
+footer p::before {
+  content: '\273F '; /* Special Unicode character before the text */
+}
+
+footer p::after {
+  content: ' \273F'; /* Special Unicode character after the text */
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="#">AI IMAGE</a>
+    </div>
+
+   <!-- <script>
+      function changebgColor(color) {
+        document.body.style.backgroundColor = color;
+      }
+
+      function changeImage(imageSrc) {
+        document.getElementById("displayImage").src = imageSrc;
+      }
+    </script>
+
+    <div class="method">
+      <input type="button" onclick="changebgColor('red');" 
+        style="border:1px solid black; border-radius:50%; background-color:red; width:40px; height:40px;">
+      <input type="button" onclick="changebgColor('lime');" 
+        style="border:1px solid black; border-radius:50%; background-color:lime; width:40px; height:40px;">
+      <input type="button" onclick="changebgColor('maroon');" 
+        style="border:1px solid black; border-radius:50%; background-color:maroon; width:40px; height:40px;">
+      <input type="button" onclick="changebgColor('skyblue');" 
+        style="border:1px solid black; border-radius:50%; background-color:skyblue; width:40px; height:40px;">
+    </div>
+    -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Tools.html">Tools</a></li>
+        <li><a href="images.html">Images</a></li>
+        <li>
+          <a href="#">Categories</a>
+          <div class="dropdown">
+            <ul>
+              <li><a href="nature.html">Nature</a></li>
+              <li><a href="Food_Objects.html">Food and Objects</a></li>
+              <li><a href="Sci_Fi.html">Fantasy and Sci-Fi</a></li>
+              <li><a href="Designs.html">Architectural Designs</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header><br>
+  <section class="about-ai">
+    <h2>How AI Generative Image Technology Works</h2>
+    <p class="styled-text">
+      AI Generative Image technology uses advanced machine learning algorithms to create images based on patterns, data, and instructions. 
+      These models, often built on neural networks, can generate stunning visuals that mimic reality or create entirely new concepts.
+      This technology is revolutionizing industries such as design, entertainment, and art by allowing creators to experiment 
+      with visuals that are impossible to produce through traditional methods. The potential of AI-generated images is vast, 
+      offering endless creative possibilities in digital media.
+    </p>
+ </section><hr>
+<!-- Slideshow Section -->
+  <div class="slideshow-container" >
+    <div class="slides fade">
+      <img src="flower.jpg" style="width:100%">
+    </div>
+    <div class="slides fade">
+      <img src="sunrise.jpg" style="width:100%">
+    </div>
+    <div class="slides fade">
+      <img src="sunset.jpg" style="width:100%">
+    </div>
+	<div class="slides fade">
+      <img src="mango.PNG" style="width:100%">
+    </div>
+    <div class="slides fade">
+      <img src="mantree.PNG" style="width:100%">
+    </div>
+    <!-- Navigation buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <br>
+
+  <!-- Dots for navigation -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+  
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2024 AI IMAGE. All Rights Reserved.</p>
+    <p>Created with ❤ and powered by AI technology</p>
+  </div>
+</footer>
+  
+</body>
+</html>
